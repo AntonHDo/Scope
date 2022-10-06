@@ -14,7 +14,22 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-// Your code here
+const arrowGetFullName = (person) => {
+  for (let key in person){
+    let firstName = person["firstName"];
+    let lastName = person["lastName"];
+    let name = firstName + lastName;
+    console.log(firstName);
+    console.log(lastName);
+    return name;
+  }
+
+}
+
+let p1 = {firstName: 'John', lastName: 'Doe'};
+arrowGetFullName(p1); // => 'John Doe'
+let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+arrowGetFullName(p2); // => 'Charlie Brown'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
