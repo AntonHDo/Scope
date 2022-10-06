@@ -26,12 +26,29 @@ const arrowGetFullName = (person) => {
 }
 
 let p1 = { firstName: 'John', lastName: 'Doe' };
-arrowGetFullName(p1); // => 'John Doe'
-let p2 = { firstName: 'Charlie', lastName: 'Brown', age: 9 };
-arrowGetFullName(p2); // => 'Charlie Brown'
+// arrowGetFullName(p1); // => 'John Doe'
+// let p2 = { firstName: 'Charlie', lastName: 'Brown', age: 9 };
+// arrowGetFullName(p2); // => 'Charlie Brown'
 
-console.log(arrowGetFullName(p1))
-console.log(arrowGetFullName(p2))
+// console.log(arrowGetFullName(p1))
+// console.log(arrowGetFullName(p2))
+
+
+// for (let key in p1) {     // for in loop with always give the key of an object, and with key can always get value
+//   console.log("key: ", key)
+//   console.log("value: ", p1[key])
+//   return p1[key];
+// }
+
+console.log(p1.firstName)
+console.log(p1["firstName"])
+console.log(p1.firstName + " " + p1.lastName)
+
+
+
+
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
