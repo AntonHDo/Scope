@@ -32,10 +32,7 @@ let arrowMyMap = (array, cb) => {
 
 }
 
-for (let i = 0; i < array.length; i++){
-  let num = array[i]
-  newArray.push(cb(num))
-}
+// 
 
 let result1 = arrowMyMap([100, 25, 81, 64], Math.sqrt); // result1 is an array
 console.log(result1);   // [ 10, 5, 9, 8 ]
