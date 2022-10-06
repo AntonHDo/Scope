@@ -15,22 +15,23 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 
 const arrowGetFullName = (person) => {
-  for (let key in person){
-    let firstName = person["firstName"];
-    let lastName = person["lastName"];
-    let name = firstName + lastName;
-    console.log(firstName);
-    console.log(lastName);
-    return name;
-  }
+
+  let firstName = person['firstName']; // = value of first name
+  let lastName = person['lastName']; // =  value of last name
+  let fullName = firstName + " " + lastName; // = value of first + space + value of last
+  // console.log(fullName);
+  return fullName;
+
 
 }
 
-let p1 = {firstName: 'John', lastName: 'Doe'};
+let p1 = { firstName: 'John', lastName: 'Doe' };
 arrowGetFullName(p1); // => 'John Doe'
-let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+let p2 = { firstName: 'Charlie', lastName: 'Brown', age: 9 };
 arrowGetFullName(p2); // => 'Charlie Brown'
 
+console.log(arrowGetFullName(p1))
+console.log(arrowGetFullName(p2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
