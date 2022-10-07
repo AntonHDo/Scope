@@ -24,6 +24,26 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 // Your code here
 
+const lazyAdder = (firstNum) => {
+  let sum = firstNum;
+  console.log("first number ---------------->  " + sum);
+  return function (secondNum) {
+    console.log("second number ------------------>  " + secondNum);
+    sum += secondNum;
+    return function (thirdNum) {
+      console.log("third number ---------------------->  " + thirdNum);
+      sum += thirdNum;
+      return sum;
+    }
+  }
+}
+
+// Example 1:
+let firstAdd = lazyAdder(1);
+let secondAdd = firstAdd(2);
+let sum = secondAdd(3);
+console.log(sum); // prints 6
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

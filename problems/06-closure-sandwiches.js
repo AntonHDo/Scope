@@ -18,6 +18,19 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 ***********************************************************************/
 
 // Your code here
+const sandwichMaker = () => {
+  let order = 'One sandwitch with tomato';
+  return function (item) {
+    order += " and " + item;
+    return order // reassign order over and over. It looks for order variable, which is goes to the function.
+  }
+}
+// when we call on the function down there, we go to the top to bottom.
+
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
